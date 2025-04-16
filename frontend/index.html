@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="quote-container">
+      <div id="quote-box">
+        <p id="quote"></p>
+        <p id="author"></p>
+        <button id="new-quote">New quote</button>
+      </div>
+      <label>
+        Auto-Play:
+        <input type="checkbox" id="auto-play-toggle" />
+      </label>
+      <p id="auto-play-status">Auto-Play: OFF</p>
+      <form id="add-quote-form">
+        <h3>Add a New Quote</h3>
+        <input type="text" id="new-quote-text" placeholder="Enter quote" required />
+        <input type="text" id="new-quote-author" placeholder="Enter author" required />
+        <button type="submit">Submit</button>
+        <p id="submit-status"></p>
+      </form>
+    </div>
+    <script defer src="script.js"></script>
+  </body>
+  </html>
