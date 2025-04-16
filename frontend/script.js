@@ -10,10 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const quoteForm = document.getElementById("add-quote-form");
 
   let autoPlayInterval;
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
   async function fetchNewQuote() {
-    const res = await fetch(`${API_BASE_URL}/api/quote`);
+    const res = await fetch(`https://i4c44gs0scocg0sowo4808ow.hosting.codeyourfuture.io//api/quote`);
     const data = await res.json();
     quoteElement.textContent = data.quote;
     authorElement.textContent = `— ${data.author}`;
