@@ -6,14 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const quoteTextInput = document.getElementById("new-quote-text");
   const authorInput = document.getElementById("new-quote-author");
-  //const submitButton = document.getElementById("submit-quote");
   const submitStatus = document.getElementById("submit-status");
   const quoteForm = document.getElementById("add-quote-form");
 
   let autoPlayInterval;
 
   async function fetchNewQuote() {
-    const res = await fetch("/api/quote");
+    const res = await fetch("http://localhost:3000/api/quote");
     const data = await res.json();
     quoteElement.textContent = data.quote;
     authorElement.textContent = `— ${data.author}`;
