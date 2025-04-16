@@ -57,6 +57,6 @@ app.post("/api/quote", (req, res) => {
 
 app.listen(PORT, () => {
   const host = process.env.HOST || "localhost";
-  console.log(`🚀 Server is running at http://${host}:${PORT}`);
+  console.log(`Server is running at http://${host}:${PORT}`);
 });
 
