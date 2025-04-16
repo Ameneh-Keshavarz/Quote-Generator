@@ -1,22 +1,16 @@
 import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
 import { quotes } from "./quotes.js";
 import cors from "cors";
 
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
 
-// app.use(express.static(path.join(__dirname, "../frontend")));
 app.use(cors());
 
 app.get("/", (req, res) => {
-  //res.sendFile(path.join(__dirname, "../frontend", "index.html"));
-  res.json({result:"backend is"});
+  res.json({result:"server is running"});
 });
 
 app.get("/api/quote", (req, res) => {
@@ -62,5 +56,7 @@ app.post("/api/quote", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  const host = process.env.HOST || "localhost";
+  console.log(`🚀 Server is running at http://${host}:${PORT}`);
 });
+
