@@ -41,7 +41,7 @@ quoteForm.addEventListener("submit", async (e) => {
     return;
   }
 
-  const res = await fetch("/api/quote", {
+  const res = await fetch("https://i4c44gs0scocg0sowo4808ow.hosting.codeyourfuture.io/api/quote/api/quote", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
