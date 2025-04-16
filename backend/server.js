@@ -8,14 +8,15 @@ import cors from "cors";
 const app = express();
 const PORT = 3000;
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
-app.use(express.static(path.join(__dirname, "../frontend")));
+// app.use(express.static(path.join(__dirname, "../frontend")));
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend", "index.html"));
+  //res.sendFile(path.join(__dirname, "../frontend", "index.html"));
+  res.json({result:"backend is"});
 });
 
 app.get("/api/quote", (req, res) => {
