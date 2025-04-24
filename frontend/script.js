@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let autoPlayInterval;
 
   async function fetchNewQuote() {
-    const res = await fetch(`https://i4c44gs0scocg0sowo4808ow.hosting.codeyourfuture.io/api/quote`);
+    const res = await fetch(`https://ameneh-quote-backend.hosting.codeyourfuture.io/api/quote`);
     const data = await res.json();
     quoteElement.textContent = data.quote;
     authorElement.textContent = `— ${data.author}`;
@@ -41,7 +41,7 @@ quoteForm.addEventListener("submit", async (e) => {
     return;
   }
 
-  const res = await fetch("https://i4c44gs0scocg0sowo4808ow.hosting.codeyourfuture.io/api/quote", {
+  const res = await fetch("https://ameneh-quote-backend.hosting.codeyourfuture.io/api/quote", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
